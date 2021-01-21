@@ -1,5 +1,6 @@
 import 'package:application_unknown/widgets/chat_list.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ChatScreen extends StatefulWidget {
   @override
@@ -9,6 +10,23 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
-    return ChatList();
+    return Scaffold(
+      appBar: PreferredSize(
+        preferredSize: Size.fromHeight(65),
+        child: AppBar(
+          titleSpacing: 30,
+          elevation: 0,
+          title: Text(
+            "Chats",
+            style: GoogleFonts.ubuntu(
+                color: Colors.grey[700],
+                fontSize: 23,
+                fontWeight: FontWeight.bold),
+          ),
+          backgroundColor: Colors.white,
+        ),
+      ),
+      body: ChatList(),
+    );
   }
 }

@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class ProfileScreen extends StatefulWidget {
+class SettingsScreen extends StatefulWidget {
   @override
-  _ProfileScreenState createState() => _ProfileScreenState();
+  _SettingsScreenState createState() => _SettingsScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,7 +16,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
           titleSpacing: 30,
           elevation: 0,
           title: Text(
-            "Profile",
+            "Settings",
             style: GoogleFonts.ubuntu(
                 color: Colors.grey[700],
                 fontSize: 23,
