@@ -3,42 +3,58 @@ import 'package:badges/badges.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class ChatListTile extends StatelessWidget {
+  final String imageUrl;
+  final String title;
+  final String subTitle;
+
+  ChatListTile({
+    @required this.imageUrl,
+    @required this.title,
+    @required this.subTitle,
+  });
+
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      onTap: () {},
-      tileColor: Colors.white,
-      contentPadding: EdgeInsets.all(15),
-      leading: CircleAvatar(
-        radius: 30.0,
-        backgroundImage: AssetImage("assets/images/man-1246508_1920.jpg"),
-      ),
-      title: Text(
-        "Mark High",
-        style: GoogleFonts.ubuntu(
-            fontSize: 17, fontWeight: FontWeight.bold, color: Colors.grey[900]),
-      ),
-      subtitle: Text(
-        "Thanks Matt and have a nice day!",
-        style: GoogleFonts.ubuntu(),
-      ),
-      trailing: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        children: [
-          Text(
-            "7h",
-            style: GoogleFonts.ubuntu(
-                fontWeight: FontWeight.bold, color: Colors.grey),
-          ),
-          Badge(
-            badgeContent: Text(
-              "2",
-              style: GoogleFonts.ubuntu(fontWeight: FontWeight.bold),
+    return Container(
+      margin: EdgeInsets.all(5),
+      child: ListTile(
+        onTap: () {},
+        tileColor: Colors.white,
+        contentPadding: EdgeInsets.all(5),
+        leading: CircleAvatar(
+          radius: 30.0,
+          backgroundImage: AssetImage(imageUrl),
+        ),
+        title: Text(
+          title,
+          style: GoogleFonts.nunito(
+              fontSize: 18,
+              fontWeight: FontWeight.w900,
+              color: Colors.grey[800]),
+        ),
+        subtitle: Text(
+          subTitle,
+          style: GoogleFonts.nunito(fontWeight: FontWeight.w600),
+        ),
+        trailing: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            Text(
+              "7h",
+              style: GoogleFonts.ubuntu(
+                  fontWeight: FontWeight.bold, color: Colors.grey),
             ),
-            badgeColor: Colors.purple[200],
-            padding: EdgeInsets.all(8),
-          )
-        ],
+            Badge(
+              badgeContent: Text(
+                "2",
+                style: GoogleFonts.ubuntu(
+                    fontWeight: FontWeight.bold, color: Colors.white),
+              ),
+              badgeColor: Colors.indigoAccent,
+              padding: EdgeInsets.all(8),
+            )
+          ],
+        ),
       ),
     );
   }

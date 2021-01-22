@@ -13,13 +13,21 @@ class _ChatListState extends State<ChatList> {
     return ListView(
       children: [
         SearchBar(),
-        ChatListTile(),
-        ChatListTile(),
-        ChatListTile(),
-        ChatListTile(),
-        ChatListTile(),
-        ChatListTile(),
-        ChatListTile(),
+        ChatListTile(
+          imageUrl: "assets/images/people-3168830_1920.jpg",
+          title: "Mark Spencer",
+          subTitle: "Sure,no problem",
+        ),
+        ChatListTile(
+          imageUrl: "assets/images/portrait-657116_1920.jpg",
+          title: "Jennifer Cleo",
+          subTitle: "See you soon Mike",
+        ),
+        ChatListTile(
+          imageUrl: "assets/images/people-3168830_1920.jpg",
+          title: "Mark Spencer",
+          subTitle: "Sure,no problem",
+        ),
       ],
       padding: EdgeInsets.only(right: 10, left: 10),
     );

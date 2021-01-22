@@ -20,7 +20,7 @@ class _ChatScreenState extends State<ChatScreen> {
             "Chats",
             style: GoogleFonts.ubuntu(
                 color: Colors.grey[700],
-                fontSize: 23,
+                fontSize: 24,
                 fontWeight: FontWeight.bold),
           ),
           backgroundColor: Colors.white,

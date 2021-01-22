@@ -25,6 +25,20 @@ class _ProfileScreenState extends State<ProfileScreen> {
           backgroundColor: Colors.white,
         ),
       ),
+      body: Container(
+        color: Colors.white10,
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CircleAvatar(
+              backgroundImage: AssetImage("assets/images/man-1246508_1920.jpg"),
+              radius: 100.0,
+            ),
+          ],
+        ),
+      ),
     );
   }
 }

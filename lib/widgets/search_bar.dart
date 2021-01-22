@@ -11,10 +11,11 @@ class SearchBar extends StatelessWidget {
           leading: Icon(
             Icons.search_rounded,
             color: Colors.purpleAccent,
+            size: 30,
           ),
           title: Text(
             "Search",
-            style: GoogleFonts.ubuntu(),
+            style: GoogleFonts.nunito(),
           ),
         ),
       ],
