@@ -15,12 +15,12 @@ class ChatListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(5),
+    return Padding(
+      padding: EdgeInsets.all(8),
       child: ListTile(
         onTap: () {},
         tileColor: Colors.white,
-        contentPadding: EdgeInsets.all(5),
+        contentPadding: EdgeInsets.all(10),
         leading: CircleAvatar(
           radius: 30.0,
           backgroundImage: AssetImage(imageUrl),
